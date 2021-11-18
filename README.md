@@ -1,1 +1,1 @@
-# m2m-websocket-application-demo
+# m2m websocket-application demo
