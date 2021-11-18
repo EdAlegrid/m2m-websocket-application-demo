@@ -1,4 +1,4 @@
-# m2m web-application demo
+# m2m websocket-application demo
 
 ![](https://raw.githubusercontent.com/EdoLabs/src2/master/quicktour4.svg?sanitize=true)
 [](quicktour.svg)
