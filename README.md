@@ -12,8 +12,9 @@ The back-end server can be hosted from any computers - Linux, Windows or Mac. Th
 The remote devices ideally should be a Raspberry Pi device. However if you don't have any, you can just use any computers - Linux or Windows as replacement.
 
 ## Option1 - Remote Devices Setup using Raspberry Pi with Led Actuator
-##### On both devices, install an led actuator on pin 33 and 35.
-##### On device 100, install push-button switches on pin 11 and 13.
+On both devices, install an led actuator on pin 33 and 35.
+
+On device 100, install push-button switches on pin 11 and 13.
 
 #### Remote Device1
 
