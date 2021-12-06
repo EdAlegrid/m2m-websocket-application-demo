@@ -3,11 +3,11 @@
 ![](https://raw.githubusercontent.com/EdoLabs/src2/master/quicktour4.svg?sanitize=true)
 [](quicktour.svg)
 
-This is a quick demo on how to integrate *m2m* into your websocket application project. It also demonstrates how *m2m* can easily break up your application using a microservices architecture pattern.
+This is a quick demo on how to integrate *m2m* into your websocket application project. It also demonstrates how m2m devides your application into independent autonomous processes following the microservices architecture pattern.
 
 The demo consists of a simple front-end setup using a browser websocket client and a back-end server using node, ws module and express.
 
-The back-end server can be hosted from any computers - Linux, Windows or Mac. The server acting as *m2m* client will then access and communicate with the remote devices - *device1* and *device2*.
+The back-end server can be hosted from any platform - Linux, Windows or Mac. The server acting as *m2m* client will then access and communicate with the remote devices - *device1* and *device2*.
 
 The remote devices ideally should be a Raspberry Pi device. However if you don't have any, you can just use any computers - Linux or Windows as replacement.
 
