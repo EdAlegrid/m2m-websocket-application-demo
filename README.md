@@ -9,7 +9,7 @@ The demo consists of a simple front-end setup using a browser websocket client a
 
 The back-end server can be hosted from any platform - Linux, Windows or Mac. The server acting as *m2m* client will then access and communicate with the remote devices - *device1* and *device2*.
 
-The remote devices ideally should be a Raspberry Pi device. However if you don't have any, you can just use any computers - Linux or Windows as replacement.
+The remote devices ideally should be a Raspberry Pi device. However, if their are not available, you can just use any computers - Linux or Windows instead.
 
 ## Option1 - Remote Devices Setup using Raspberry Pi with Led Actuator
 On both devices, install an led actuator on pin 33 and 35.
