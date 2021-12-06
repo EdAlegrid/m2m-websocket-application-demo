@@ -7,7 +7,7 @@ This is a quick demo on how to integrate *m2m* into your websocket application p
 
 The demo consists of a simple front-end setup using a browser websocket client and a back-end server using node, ws module and express.
 
-The back-end server can be hosted from any platform - Linux, Windows or Mac. The server acting as *m2m* client will then access and communicate with the remote devices - *device1* and *device2*.
+The back-end server can be hosted from any platform - Linux, Windows or Mac. The server acting as *m2m* client will then access and communicate with the remote devices - *device1* and *device2* which are running on their own independent processes.
 
 The remote devices ideally should be a Raspberry Pi device. However, if their are not available, you can just use any computers - Linux or Windows instead.
 
