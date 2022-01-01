@@ -349,7 +349,6 @@
   }
 
   function wsClient(path, pl, msgId, cb){
-
     try{
       let ws = new WebSocket('ws://127.0.0.1:5000/' + path);
       ws.onopen = function(e) {
