@@ -348,43 +348,7 @@
     }
   }
 
-  function wsClient(path, pl, cb){
-
-    let msgId = null;  
-
-    if(path === 'demo1' && Array.isArray(pl.id)){
-      msgId = "msg1";        
-    }
-    else if(path === 'demo1' && pl.toggle){
-      msgId = "msg2";        
-    }
-    else if(path === 'demo1' && pl.switch && pl.pin === 33){
-      msgId = "msg3";        
-    }
-    else if(path === 'demo1' && pl.switch && pl.pin === 35){
-      msgId = "msg4";        
-    }
-    else if(pl.method === 'getData'){
-      msgId = "msg5";        
-    }
-    else if(pl.method === 'sendData'){
-      msgId = "msg6";
-    }
-    else if(pl.method === 'watchData'){
-      msgId = "msg7";
-    }
-    else if(pl.method === 'unwatchData'){
-      msgId = "msg8";
-    }
-    else if(pl.getState){
-      msgId = "msg9";
-    }
-    else if(pl.watch){
-      msgId = "msg10";
-    }
-    else if(pl.unwatch){
-      msgId = "msg11";
-    }
+  function wsClient(path, pl, msgId, cb){
 
     try{
       let ws = new WebSocket('ws://127.0.0.1:5000/' + path);
@@ -394,7 +358,6 @@
         }
       };
       ws.onmessage = function (e) {
-        //console.log('e.data', e.data)
         if (ws.readyState === 1) {
            processRcvdData(msgId, e.data);
         }
@@ -413,17 +376,17 @@
 
   function deviceOn(){
     console.log('deviceOn');
-    wsClient('demo1', {id:[100, 200], pin:[33, 35], state:true});
+    wsClient('demo1', {id:[100, 200], pin:[33, 35], state:true}, 'msg1');
   }
 
   function deviceOff(){
     console.log('deviceOff');
-    wsClient('demo1', {id:[100, 200], pin:[33, 35], state:false});
+    wsClient('demo1', {id:[100, 200], pin:[33, 35], state:false}, 'msg1');
   }
 
   function deviceToggle(){
     console.log('deviceToggle');
-    wsClient('demo1', {id:100, pin:33, state:remoteDevice.state, toggle:true});
+    wsClient('demo1', {id:100, pin:33, state:remoteDevice.state, toggle:true}, 'msg2');
   }
 
   function deviceControl(sel){
@@ -431,48 +394,48 @@
     let pin = null;
     if(sel === 1){
       pin = 33;
-      wsClient('demo1', {id:200, pin:pin, state:device1.state, switch:true});
+      wsClient('demo1', {id:200, pin:pin, state:device1.state, switch:true}, 'msg3');
     }
     else{
       pin = 35;
-      wsClient('demo1', {id:200, pin:pin, state:device2.state, switch:true});
+      wsClient('demo1', {id:200, pin:pin, state:device2.state, switch:true}, 'msg4');
     }
-  }
-
-  function getState(){
-    console.log('getState');
-    wsClient('demo1', {id:100, pin:11, state:'', getState:true});
-  }
-
-  function watchState(){
-    console.log('watchState');
-    wsClient('demo1', {id:100, pin:11, state:'', watch:true});
-  }
-
-  function unwatchState(){
-    console.log('unwatchState');
-    wsClient('demo1', {id:100, pin:11, state:'', unwatch:true});
   }
 
   function getData(){
     console.log('getData');
-    wsClient('demo2', {id:100, channel:'get-data', method:'getData'});
+    wsClient('demo2', {id:100, channel:'get-data', method:'getData'}, 'msg5');
   }
 
   function sendData(){
     console.log('sendData');
     let inputData = document.getElementById("input-value").value;
-    wsClient('demo2', {id:100, channel:'send-data', method:'sendData', payload:inputData});
+    wsClient('demo2', {id:100, channel:'send-data', method:'sendData', payload:inputData}, 'msg6');
   }
 
   function watchData(){
     console.log('watchData');
-    wsClient('demo2', {id:200, channel:'random-number', method:'watchData'});
+    wsClient('demo2', {id:200, channel:'random-number', method:'watchData'}, 'msg7');
   }
 
   function unwatchData(){
     console.log('unwatchData');
-    wsClient('demo2', {id:200, channel:'random-number', method:'unwatchData'});
+    wsClient('demo2', {id:200, channel:'random-number', method:'unwatchData'}, 'msg8');
+  }
+
+  function getState(){
+    console.log('getState');
+    wsClient('demo1', {id:100, pin:11, state:'', getState:true}, 'msg9');
+  }
+
+  function watchState(){
+    console.log('watchState');
+    wsClient('demo1', {id:100, pin:11, state:'', watch:true}, 'msg10');
+  }
+
+  function unwatchState(){
+    console.log('unwatchState');
+    wsClient('demo1', {id:100, pin:11, state:'', unwatch:true}, 'msg11');
   }   
 
   </script>
