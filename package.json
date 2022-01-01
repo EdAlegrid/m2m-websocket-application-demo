@@ -1,5 +1,5 @@
 {
-  "name": "m2m websocket-application demo",
+  "name": "m2m-websocket-application-demo",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
