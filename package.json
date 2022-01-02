@@ -6,34 +6,5 @@
     "express": "^4.17.1",
     "m2m": "^1.8.6",
     "ws": "^8.2.3"
-  },
-  "keywords": [
-    "bcm2835",
-    "gpio",
-    "pi",
-    "raspberry",
-    "raspberrypi",
-    "raspberry pi",
-    "raspberry pi 3",
-    "rpi",
-    "rpio",
-    "onoff",
-    "pwm",
-    "i2c",
-    "spi",
-    "m2m",
-    "iot",
-    "aws",
-    "faas",
-    "telematics",
-    "industry 4.0",
-    "telemetry",
-    "SCADA",
-    "remote control",
-    "node-m2m",
-    "microservices",
-    "micro-services",
-    "machine-to-machine",
-    "industrial control system"
-  ]
+  }
 }
