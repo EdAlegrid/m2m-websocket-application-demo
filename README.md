@@ -3,7 +3,7 @@
 ![](https://raw.githubusercontent.com/EdoLabs/src2/master/quicktour4.svg?sanitize=true)
 [](quicktour.svg)
 
-This is a quick demo on how to integrate *m2m* into your websocket application project. It also demonstrates how m2m devides your application into independent autonomous processes following the microservices architecture pattern.
+This is a quick demo on how to integrate *m2m* into your websocket application project.
 
 The demo consists of a simple front-end setup using a browser websocket client and a back-end server using node, ws module and express.
 
